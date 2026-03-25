@@ -1,4 +1,4 @@
-list=[10,23,4,26,475,24,54]
+list=[10,23,4,26,475,24,54,44]
 #using while loop feching even numbers
 i=0
 while i<len(list):
