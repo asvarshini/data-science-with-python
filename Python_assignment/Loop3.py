@@ -13,7 +13,7 @@ for num in arr:
                 print(f"{num} it is not a prime number")
                 break
         else:
-            print(f"{num} is a prime number")
+            print(f"{num} is a prime numbers")
     else:
-     print(f"{num} it is not prime number")
+     print(f"{num} it is not prime numbers")
     
