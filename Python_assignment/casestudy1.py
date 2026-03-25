@@ -22,5 +22,5 @@ print("array containig even array is \n",even(list_square))
 #print member of 1st array present in second array
 
 member=[x for x in list_square if x in even_array]
-print(f"members present in both arrays are :\n",member)
+print(f"members present in both arrays are:\n",member)
 
