@@ -12,7 +12,6 @@ class Child1(Parent):
 class Child2(Parent):
     def fun3(self):
         print("This is the message from Child2")
-
 # Objects of Child1 and Child2
 obj1 = Child1()
 obj2 = Child2()
