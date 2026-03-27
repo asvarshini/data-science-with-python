@@ -1,30 +1,45 @@
-#List containg square number from  1 to 10
-list_square=[x*x for x in range(1,11)]
-print(list_square)
-#checking list containg leap year or not
-leap_year=[]
-not_leap_year=[]
-for year in list_square:
-    if((year%4 ==0 and year %100!=0) or(year %400==0)):
-        leap_year.append(year)
-    else:
-        not_leap_year.append(year)
-print("Leap years are \n",leap_year)
-print("Not leap year \n",not_leap_year)
-#funtion to return array that are even
-even_array=[]
-def even(list_square):
-    for i in list_square:
-        if i%2==0:
-            even_array.append(i)
-    return even_array
-print("array containig even array is \n",even(list_square))
-#print member of 1st array present in second array
-members=[]
-def member(list_square,even_array):
-    if list_square in even_array:
-        members.append(list_square)
-    return members
-member=[x for x in list_square if x in even_array]
-print(f"members present in both arrays are :\n",member)
+#tuple
+tuple1=(1,2,3,4)
+tuple2=(9,8,7,6)
+#combing tuple
+t_combine=tuple1+tuple2
+print("After the combination of two tuples",t_combine)
+#t_combine to  repeate for three times
+for i in range(1,4):
+    print(f"{i} time{t_combine}")
+print("acessing 3rd element is ",t_combine[2])
+print(f"First three elements are : {t_combine[:3]}")
+print(f"last three elements are : {t_combine[-3:]}")
+#list
+my_list=[
+    (1,2,3),
+    ("a","b","c"),
+    (True, False)  
+        ]
 
+my_list.append((1,'a,True'))
+print(f"mylist after append tuple={ my_list}")
+my_list.append(["varshini",123])
+print(f"mylist after append list ={my_list}")
+#dictnory
+my_dict={
+    'fruits' :["Banana ","Apple","Orange"],
+    'cost':[20,100,60]
+}
+keys=[]
+values=[]
+for key in my_dict:
+    keys.append(key)
+    values.append(my_dict[key])
+
+print(f"Keys={keys}")
+print(f"values ={values}")
+
+#easy metond to print key and values
+print("Second method")
+print("keys",list(my_dict.keys ()))
+print("values= ",list(my_dict.values()))
+#Set
+my_set={1,1,"a","a",True,True} #1,and True consider as same in python
+
+print(my_set)

@@ -43,3 +43,7 @@ print("values= ",list(my_dict.values()))
 my_set={1,1,"a","a",True,True} #1,and True consider as same in python
 
 print(my_set)
+'''
+my_dict.keys() → returns all keys
+my_dict.values() → returns all values
+my_dict.items() → returns key + value pairs'''
