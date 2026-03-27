@@ -6,7 +6,7 @@ class Parent:
 # Child1 inherits from Parent
 class Child1(Parent):
     def fun2(self):
-        print("This is the message from the fun2")
+        print("This is the message from the fun2 ")
 
 # Child2 inherits from Child1
 class Child2(Child1):
