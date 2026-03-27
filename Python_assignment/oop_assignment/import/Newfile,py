@@ -1,0 +1,17 @@
+# newfile.py
+import module
+
+x = 10
+y = 5
+
+# Addition
+print("Addition:", module.add(x, y))
+
+# Subtraction
+print("Subtraction:", module.sub(x, y))
+
+# Multiplication
+print("Multiplication:", module.mul(x, y))
+
+# Division
+print("Division:", module.divi(x, y))
