@@ -7,7 +7,7 @@ class sub2:
 class Super(Sub1,sub2):
     def final(self):
         
-        print("Thise message is from the Super class")
+        print("Thise message is from the Super clas")
 ob= Super()
 ob.first()
 ob.second()
