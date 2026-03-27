@@ -17,7 +17,6 @@ class Child2(Parent):
 class Hybrid(Child1, Child2):
     def fun4(self):
         print("This is fun4 from Hybrid")
-
 # Object of Hybrid
 obj = Hybrid()
 
