@@ -8,7 +8,7 @@ class A:
 class B:
     def __init__(self):
         global name,id
-        self.name="Language"
+        self.name="Languag"
         self.id=33
     def details(self):
         return name
