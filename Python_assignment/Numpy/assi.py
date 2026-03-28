@@ -10,7 +10,7 @@ print("added to orginal aray \n",original)
 arr1=[1,2,3,4]
 arr2=[5,6,7,8]
 sum_array=arr1+arr2
-print("sum array \n",sum_array)
+print("sum array =\n",sum_array)
 a2=np.arange(10,100,10)
 arr2=a2.reshape(3,3)
 print("array with (3,3)from range (10,90) \n", arr2)
