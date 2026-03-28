@@ -9,6 +9,7 @@ b=np.array([4,5,5])
 c=np.array([6,7,8])
 print("sum =",sum_arrays(a,b,c))
 print("****************")
+
 def top_left(arr3,n,m):
     return arr3[:2,:2]
 arr3=np.array([[1,2,3],[4,5,6],[7,8,9]])
