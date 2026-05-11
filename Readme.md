@@ -1,7 +1,5 @@
 \# Data Science With Python 🚀
 
-
-
 A structured repository for learning and practicing:
 
 \- Python
@@ -19,24 +17,13 @@ A structured repository for learning and practicing:
 \- Exploratory Data Analysis (EDA)
 
 
-
 This repository contains hands-on notebooks, assignments, case studies, and practice programs built during my Data Science learning journey.
 
 
-
-\---
-
-
-
-\## 📂 Repository Structure
-
-
-
-```text
+## 📂 Repository Structure
 
 Data-Science-With-Python/
 
-│
 
 ├── 01\_Python\_Basic/
 
@@ -53,10 +40,7 @@ Data-Science-With-Python/
 └── README.md
 
 
-
 📘 Topics Covered
-
-
 
 Python Fundamentals
 
@@ -75,10 +59,7 @@ Matplotlib \& Seaborn
 EDA \& Case Studies
 
 
-
 🛠️ Tools Used
-
-
 
 Python
 
@@ -92,17 +73,10 @@ Matplotlib
 
 Seaborn
 
-
-
 🎯 Goal
-
-
 
 To build strong foundations in Python and Data Science through practical implementation and projects.
 
-
-
 🌟 GitHub
-
 GitHub: https://github.com/asvarshini⁠
 
