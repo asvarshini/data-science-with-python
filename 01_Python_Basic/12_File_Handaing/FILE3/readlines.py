@@ -1,0 +1,6 @@
+#using readlines()
+file=open("File.txt",'r')
+content=file.read()
+print("reading content using readlined")
+print(content)
+file.close()

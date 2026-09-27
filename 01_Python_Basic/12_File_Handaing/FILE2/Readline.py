@@ -1,0 +1,5 @@
+file=open("Auto.csv",'r')
+content=file.readline()
+print("reading file using readline")
+print(content)
+file.close()

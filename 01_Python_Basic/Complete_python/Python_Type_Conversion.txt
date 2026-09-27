@@ -1,0 +1,478 @@
+# Python Type Conversion
+
+Type conversion means **changing a value from one data type to another data type**.
+
+Python provides built-in functions such as:
+
+* `int()`
+* `float()`
+* `str()`
+* `bool()`
+* `list()`
+* `tuple()`
+* `set()`
+
+## 1. Integer → String
+
+```python
+x = 25
+
+y = str(x)
+
+print(y)
+print(type(y))
+```
+
+Output:
+
+```text
+25
+<class 'str'>
+```
+
+So:
+
+```text
+25 (int) → "25" (str)
+```
+
+Every integer has a meaningful string representation, so this conversion is allowed.
+
+---
+
+## 2. String → Integer
+
+```python
+x = "25"
+
+y = int(x)
+
+print(y)
+print(type(y))
+```
+
+Output:
+
+```text
+25
+<class 'int'>
+```
+
+But the string must contain valid integer data.
+
+```python
+int("25")      # Works
+int("100")     # Works
+int("-50")     # Works
+```
+
+But:
+
+```python
+int("hello")
+```
+
+gives:
+
+```text
+ValueError
+```
+
+Because `"hello"` cannot be interpreted as an integer.
+
+---
+
+## 3. String → Float
+
+```python
+x = "25.5"
+
+y = float(x)
+
+print(y)
+print(type(y))
+```
+
+Output:
+
+```text
+25.5
+<class 'float'>
+```
+
+But:
+
+```python
+float("hello")
+```
+
+gives:
+
+```text
+ValueError
+```
+
+---
+
+## 4. Integer → Float
+
+```python
+x = 10
+
+y = float(x)
+
+print(y)
+```
+
+Output:
+
+```text
+10.0
+```
+
+So:
+
+```text
+int → float
+```
+
+is allowed.
+
+---
+
+## 5. Float → Integer
+
+```python
+x = 10.8
+
+y = int(x)
+
+print(y)
+```
+
+Output:
+
+```text
+10
+```
+
+Important:
+
+`int()` does NOT round the number. It removes the decimal portion.
+
+```text
+10.8  → 10
+10.99 → 10
+-10.8 → -10
+```
+
+---
+
+# 6. Boolean Conversion
+
+Boolean values are:
+
+```python
+True
+False
+```
+
+### Boolean → Integer
+
+```python
+int(True)    # 1
+int(False)   # 0
+```
+
+### Integer → Boolean
+
+```python
+bool(1)      # True
+bool(0)      # False
+bool(100)    # True
+bool(-5)     # True
+```
+
+Generally:
+
+```text
+0 → False
+Non-zero number → True
+```
+
+---
+
+# 7. String → Boolean
+
+This is an important case.
+
+```python
+bool("hello")
+```
+
+Output:
+
+```text
+True
+```
+
+Even:
+
+```python
+bool("False")
+```
+
+gives:
+
+```text
+True
+```
+
+Why?
+
+Because Python checks whether the string is **empty**, not whether the string contains the word `"False"`.
+
+```python
+bool("")        # False
+bool("hello")   # True
+bool("False")   # True
+bool("0")       # True
+```
+
+Therefore:
+
+```text
+Empty string → False
+Non-empty string → True
+```
+
+---
+
+# 8. Tuple → List
+
+```python
+x = (1, 2, 3)
+
+y = list(x)
+
+print(y)
+print(type(y))
+```
+
+Output:
+
+```text
+[1, 2, 3]
+<class 'list'>
+```
+
+So:
+
+```text
+tuple → list
+```
+
+---
+
+# 9. List → Tuple
+
+```python
+x = [1, 2, 3]
+
+y = tuple(x)
+
+print(y)
+print(type(y))
+```
+
+Output:
+
+```text
+(1, 2, 3)
+<class 'tuple'>
+```
+
+---
+
+# 10. String → List
+
+```python
+x = "hello"
+
+y = list(x)
+
+print(y)
+```
+
+Output:
+
+```text
+['h', 'e', 'l', 'l', 'o']
+```
+
+This happens because a string is iterable, so Python takes its individual characters.
+
+---
+
+# Is Type Conversion Possible Everywhere?
+
+**No.**
+
+Python allows many conversions, but there are restrictions.
+
+The main idea is:
+
+> Python can convert a value when the target type has a meaningful way to interpret that value.
+
+For example:
+
+```python
+str(100)
+```
+
+Works because `100` can meaningfully be represented as `"100"`.
+
+But:
+
+```python
+int("hello")
+```
+
+doesn't work because `"hello"` cannot meaningfully be interpreted as an integer.
+
+Similarly:
+
+```python
+int([1, 2, 3])
+```
+
+doesn't work because Python doesn't know what integer you want this list to represent.
+
+Should it be:
+
+```text
+123
+```
+
+or:
+
+```text
+1 + 2 + 3 = 6
+```
+
+or something else?
+
+Therefore Python raises an error.
+
+---
+
+# Important: Conversion Does Not Automatically Change the Original Variable
+
+Consider:
+
+```python
+x = 10
+
+str(x)
+
+print(type(x))
+```
+
+Output:
+
+```text
+<class 'int'>
+```
+
+The original `x` is still an integer.
+
+You need to assign the converted value:
+
+```python
+x = str(x)
+
+print(type(x))
+```
+
+Now:
+
+```text
+<class 'str'>
+```
+
+So remember:
+
+```text
+x = 10
+   ↓
+str(x)
+   ↓
+"10"
+```
+
+But unless you assign it:
+
+```python
+x = str(x)
+```
+
+the original variable remains unchanged.
+
+---
+
+# Common Type Conversions
+
+| From    | To      | Example         | Result      |
+| ------- | ------- | --------------- | ----------- |
+| `int`   | `str`   | `str(10)`       | `"10"`      |
+| `str`   | `int`   | `int("10")`     | `10`        |
+| `int`   | `float` | `float(10)`     | `10.0`      |
+| `float` | `int`   | `int(10.8)`     | `10`        |
+| `int`   | `bool`  | `bool(1)`       | `True`      |
+| `bool`  | `int`   | `int(True)`     | `1`         |
+| `str`   | `bool`  | `bool("hello")` | `True`      |
+| `tuple` | `list`  | `list((1,2))`   | `[1,2]`     |
+| `list`  | `tuple` | `tuple([1,2])`  | `(1,2)`     |
+| `str`   | `list`  | `list("hi")`    | `['h','i']` |
+
+## Examples of Invalid Conversions
+
+```python
+int("hello")       # ValueError
+float("hello")     # ValueError
+int([1, 2, 3])     # TypeError
+```
+
+---
+
+# Main Rule to Remember
+
+> **Type conversion is not possible between every pair of data types. The target type must be able to meaningfully interpret the original value.**
+
+Also remember:
+
+```text
+int()   → converts to integer
+float() → converts to floating-point number
+str()   → converts to string
+bool()  → converts to Boolean
+list()  → converts to list
+tuple() → converts to tuple
+set()   → converts to set
+```
+
+And one final important point:
+
+```python
+x = str(x)
+```
+
+actually **stores the converted value** back into `x`.
+
+Without assignment:
+
+```python
+str(x)
+```
+
+you are only creating the converted value temporarily.
